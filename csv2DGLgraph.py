@@ -90,6 +90,7 @@ def get_args():
 
 if __name__ == "__main__":
     args = get_args()
+    """
     if not os.path.exists('train_csvs'):
         os.system('wget -P train_csvs https://data.dgl.ai/dataset/WSDMCup2022/edges_train_A.csv.gz')
         os.system('wget -P train_csvs https://data.dgl.ai/dataset/WSDMCup2022/node_features.csv.gz')
@@ -100,5 +101,6 @@ if __name__ == "__main__":
         os.system('wget -P test_csvs https://data.dgl.ai/dataset/WSDMCup2022/input_A_initial.csv.gz')
         os.system('wget -P test_csvs https://data.dgl.ai/dataset/WSDMCup2022/input_B_initial.csv.gz')
         os.system('gzip -d test_csvs/*.gz')
+    """
     csv2graph(args)
     
