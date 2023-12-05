@@ -34,13 +34,19 @@ gunzip -d train_csvs/*.gz
 ```
 gunzip -d test_csvs/*.gz
 ```
-9. Convert the provided CSV files to DGL graph objects (for each dataset).
+9. Convert the provided CSV files to DGL graph objects for each dataset.
 ```
-python3 csv2DGLgraph.py --dataset [A or B]
+python3 csv2DGLgraph.py --dataset A
 ```
-10. Train the baseline model (for each dataset).
 ```
-python3 base_pipeline.py --dataset [A or B]
+python3 csv2DGLgraph.py --dataset B 
+```
+10. Train the baseline model for each dataset.
+```
+python3 base_pipeline.py --dataset A
+```
+```
+python3 base_pipeline.py --dataset B
 ```
 11. Check performance on testing sets.
 - For reference, the baseline model got AUC of 0.511 on Dataset A and 0.510 on Dataset B.
