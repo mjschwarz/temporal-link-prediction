@@ -48,5 +48,5 @@ python3 base_pipeline.py --dataset A
 ```
 python3 base_pipeline.py --dataset B
 ```
-11. Check performance on testing sets.
+11. Check performance on testing sets – loss and evaluation metrics are printed to the console.
 - For reference, the baseline model got AUC of 0.511 on Dataset A and 0.510 on Dataset B.
