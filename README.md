@@ -1,10 +1,22 @@
 # Temporal Link Prediction
 
-## Instructions
+## Instructions (for Mac users)
 
 1. Clone this repository.
-2. Install [DGL](https://www.dgl.ai).
-3. Manually download the training files from the challenge website.
+2. Create a virutal environment.
+```
+python3 -m venv tlp-env
+```
+4. Activate the virutal environment
+```
+source tlp-env/bin/activate
+```
+5. Install the required packages.
+```
+pip3 install -r requirements.txt
+```
+7. (You may need to install [DGL](https://www.dgl.ai) manually.)
+8. Manually download the training files from the challenge website.
 - [edges_train_A.csv](https://data.dgl.ai/dataset/WSDMCup2022/edges_train_A.csv.gz)
 - [node_features.csv](https://data.dgl.ai/dataset/WSDMCup2022/node_features.csv.gz)
 - [edge_type_features.csv](https://data.dgl.ai/dataset/WSDMCup2022/edge_type_features.csv.gz)
@@ -22,13 +34,19 @@ gunzip -d train_csvs/*.gz
 ```
 gunzip -d test_csvs/*.gz
 ```
-9. Convert the provided CSV files to DGL graph objects (for each dataset).
+9. Convert the provided CSV files to DGL graph objects for each dataset.
 ```
-python csv2DGLgraph.py --dataset [A or B]
+python3 csv2DGLgraph.py --dataset A
 ```
-10. Train the baseline model (for each dataset).
 ```
-python base_pipeline.py --dataset [A or B]
+python3 csv2DGLgraph.py --dataset B 
 ```
-11. Check performance on testing sets.
+10. Train the baseline model for each dataset.
+```
+python3 base_pipeline.py --dataset A
+```
+```
+python3 base_pipeline.py --dataset B
+```
+11. Check performance on testing sets – loss and evaluation metrics are printed to the console.
 - For reference, the baseline model got AUC of 0.511 on Dataset A and 0.510 on Dataset B.
