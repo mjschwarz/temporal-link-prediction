@@ -149,9 +149,8 @@ def train(args, g):
         optimizer.zero_grad()
         print('Loss:', loss_values[-1])
         torch.cuda.empty_cache()
-        # test every 10th epoch
-        if not((i + 1) % 10):
-            test(args, g, model)
+        # test every epoch
+        test(args, g, model)
     return g, model
     
     

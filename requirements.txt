@@ -1,0 +1,8 @@
+pandas
+argparse
+torch
+torchvision
+scikit-learn
+numpy
+packaging
+dgl
