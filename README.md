@@ -48,7 +48,7 @@ python3 base_pipeline.py --dataset A
 ```
 python3 base_pipeline.py --dataset B
 ```
-11. Check performance on of baseline model on training/testing sets – loss and evaluation metrics are printed to the console.
+11. Check performance on of baseline model on training/testing sets – loss (every epoch) and evaluation metrics (every 10 epochs) are printed to the console.
 12. Train the baseline model for each dataset.
 ```
 python3 temporal_pipeline.py --dataset A
@@ -56,4 +56,4 @@ python3 temporal_pipeline.py --dataset A
 ```
 python3 temporal_pipeline.py --dataset B
 ```
-11. Check performance on of temporal model on training/testing sets – loss and evaluation metrics are printed to the console.
+11. Check performance on of temporal model on training/testing sets – loss (every epoch) and evaluation metrics (every 10 epochs) are printed to the console.
